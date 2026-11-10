@@ -3,7 +3,7 @@ const moviesList = document.getElementById('moviesList');
 
 loadBtn.addEventListener('click', () => {
     // Робимо запит на інший порт (перевірка CORS)
-    fetch('http://127.0.0.1:8000/api/movies/')
+    fetch('http://127.0.0.1:8000/api/v1/мovies/')
         .then(response => {
             if (!response.ok) throw new Error('Помилка мережі або CORS');
             return response.json();
