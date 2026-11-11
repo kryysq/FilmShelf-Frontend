@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmShelf - Реєстрація</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="site-header"></header>
+    <main class="container narrow">
+        <h1>Реєстрація</h1>
+
+        <form id="registerForm" class="form" novalidate>
+            <div class="form-error alert alert-error" hidden></div>
+
+            <label for="username">Ім'я користувача *</label>
+            <input id="username" name="username" type="text" maxlength="150" autocomplete="username" required>
+
+            <label for="first_name">Ім'я</label>
+            <input id="first_name" name="first_name" type="text" maxlength="150" autocomplete="given-name">
+
+            <label for="last_name">Прізвище</label>
+            <input id="last_name" name="last_name" type="text" maxlength="150" autocomplete="family-name">
+
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" maxlength="254" autocomplete="email" required>
+
+            <label for="password">Пароль * (мінімум 8 символів)</label>
+            <input id="password" name="password" type="password" maxlength="128" autocomplete="new-password" required>
+
+            <label for="password_confirm">Повторіть пароль *</label>
+            <input id="password_confirm" name="password_confirm" type="password" maxlength="128" autocomplete="new-password" required>
+
+            <button type="submit" class="btn btn-block">Зареєструватися</button>
+        </form>
+
+        <p class="muted">Вже є акаунт? <a id="loginLink" href="login.html">Увійти</a></p>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

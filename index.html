@@ -6,13 +6,21 @@
     <title>FilmShelf - Фронтенд</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <h1>🎬 Каталог фільмів (Перевірка CORS)</h1>
-        <button id="loadBtn">Отримати список фільмів з бекенду</button>
+<header id="site-header"></header>
+    <main class="container">
+        <h1>Каталог фільмів</h1>
+        <p class="muted">Цю сторінку бачать усі. Адміністратор додатково бачить кнопку «Видалити».</p>
+ 
+        <form id="searchForm" class="search">
+            <input type="search" id="searchInput" placeholder="Пошук за назвою" maxlength="255">
+            <button type="submit" class="btn">Знайти</button>
+        </form>
+ 
+        <div id="message" class="alert" hidden></div>
         <div id="moviesList" class="grid"></div>
-    </div>
-
+    </main>
+ 
+    <script src="js/movies.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
